@@ -20,9 +20,6 @@ ENV NODEJS_VERSION=10 \
     LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
-COPY contrib/bin/configure-agent /usr/local/bin/configure-agent
-
 # Install NodeJS
 RUN INSTALL_PKGS="rh-nodejs${NODEJS_VERSION} rh-nodejs${NODEJS_VERSION}-nodejs-nodemon make gcc-c++" && \
     ln -s /usr/lib/node_modules/nodemon/bin/nodemon.js /usr/bin/nodemon && \
